@@ -16,6 +16,12 @@ class ProfileUpdateRequest extends FormRequest
                 'bio' => '',
             ]);
         }
+
+        // if ($this->profile_pic === null) {
+        //     $this->merge([
+        //         'profile_pic' => 'profile_pics/default.png',
+        //     ]);
+        // }
     }
     /**
      * Get the validation rules that apply to the request.

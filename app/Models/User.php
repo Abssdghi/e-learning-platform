@@ -50,4 +50,13 @@ class User extends Authenticatable
     {
         return $this->hasOne(Profile::class);
     }
+
+    public function getProfilePicUrl(): string
+{
+    if ($this->profile && $this->profile->profile_pic) {
+        return asset('storage/' . $this->profile->profile_pic);
+    }
+
+    return asset('profile_pics/default.png');
+}
 }

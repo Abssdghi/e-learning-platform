@@ -13,7 +13,9 @@
         @csrf
     </form>
 
-    <img src="{{ asset('storage/' .Auth::user()->profile->profile_pic) }}" alt="profile_pic">
+
+    <img src="{{ Auth::user()->getProfilePicUrl() }}" alt="Profile Picture">
+
 
     <form method="post" action="{{ route('profile.update') }}" class="mt-6 space-y-6" enctype="multipart/form-data">
         @csrf
@@ -51,7 +53,7 @@
 
         <div>
             <x-input-label for="bio" :value="__('bio')" />
-            <textarea id="bio" name="bio" type="text" class="mt-1 block w-full">{{ old('bio', ($user->profile)->bio) }}</textarea>
+            <textarea id="bio" name="bio" type="text" class="mt-1 block w-full">{{ old('bio', optional($user->profile)->bio) }}</textarea>
             <x-input-error class="mt-2" :messages="$errors->get('bio')" />
         </div>
 
