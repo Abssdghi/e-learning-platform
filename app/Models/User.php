@@ -52,11 +52,16 @@ class User extends Authenticatable
     }
 
     public function getProfilePicUrl(): string
-{
-    if ($this->profile && $this->profile->profile_pic) {
-        return asset('storage/' . $this->profile->profile_pic);
+    {
+        if ($this->profile && $this->profile->profile_pic) {
+            return asset('storage/' . $this->profile->profile_pic);
+        }
+
+        return asset('profile_pics/default.png');
     }
 
-    return asset('profile_pics/default.png');
-}
+    public function courses()
+    {
+        return $this->belongsToMany(Course::class);
+    }
 }

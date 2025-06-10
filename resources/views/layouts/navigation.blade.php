@@ -11,11 +11,37 @@
                 </div>
 
                 <!-- Navigation Links -->
-                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                <!-- <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-                </div>
+
+                    
+                </div> -->
+
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                            <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                                {{ __('Dashboard') }}
+                            </x-nav-link>
+
+                            {{-- Add these new navigation links --}}
+                            @auth
+                                <x-nav-link :href="route('courses.index')" :active="request()->routeIs('courses.index')">
+                                    {{ __('Courses') }}
+                                 </x-nav-link>
+ 
+                                <x-nav-link :href="route('courses.my')" :active="request()->routeIs('courses.my')">
+                                    {{ __('My Courses') }}
+                                </x-nav-link>
+
+                                @if (auth()->user()->role === 'admin')
+                                    <x-nav-link :href="route('admin.courses.index')" :active="request()->routeIs('admin.courses.*')">
+                                        {{ __('Admin Courses') }}
+                                    </x-nav-link>
+                                @endif
+                            @endauth
+                    </div>
             </div>
 
             <!-- Settings Dropdown -->
