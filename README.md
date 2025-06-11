@@ -35,6 +35,9 @@ php artisan serve
 
 ## Database Setup
 1. Copy `.env.example` to `.env`  
+   ```bash
+   copy .env.example .env
+   ```
 2. Generate the app key:  
    ```bash
    php artisan key:generate
