@@ -4,8 +4,18 @@
   </a>
 </p>
 
-# About This Project
-A simple e-learning platform built using Laravel Framework version 12.17.0.
+# E-LEARNING PLATFORM
+
+## About This Project
+
+This repository contains the source code for a lightweight e-learning platform built with the **Laravel Framework (v12.17.0)**.
+
+The platform's core functionalities include:
+
+- **Secure User Authentication:** Full user management system including registration, login, and profile updates.
+- **Role-Based Access Control (RBAC):** A clear distinction between `Admin` and `User` roles, with protected routes ensuring proper permissions for course management and enrollment.
+- **Course Management (Admin):** A dedicated admin panel for Creating, Reading, Updating, and Deleting (CRUD) courses.
+- **User Enrollment System (User):** A simple dashboard for users to view available courses and manage their enrollments.
 
 <br>
 
@@ -85,8 +95,8 @@ php artisan serve
 - [Laravel Official Documentation](https://laravel.com/docs/12.x)  
 - [Bro Code PHP tutorial](https://youtube.com/playlist?list=PLZPZq0r_RZOO6bGTY9jbLOyF_x6tgwcuB)  
 - [Git Mag Laravel Course](https://youtube.com/playlist?list=PL1xdRbCBrpocot3OeKdg-DjEfIwUIge4x)  
-- [Laravel 12 Crash Course](https://youtu.be/of2BClSU4VI)  
-- [Laravel 12 [FREE COURSE]](https://youtu.be/EThrrjtnddw)  
+- [WebDevMatics Laravel 12 Crash Course](https://youtu.be/of2BClSU4VI)  
+- [Laravel Daily Laravel 12 Free Course](https://youtu.be/EThrrjtnddw)  
 - [Google Gemini AI](https://gemini.google.com/)  
 
 <br>
