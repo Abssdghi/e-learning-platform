@@ -23,17 +23,8 @@ A simple e-learning platform built using Laravel Framework version 12.17.0.
 git clone https://github.com/Abssdghi/e-learning-platform
 cd e-learning-platform
 composer install
-# Configure your database settings (use Database Setup section)
-php artisan storage:link
-npm install
-npm run build
-php artisan serve
 ```
-
-<br>
-
-
-## Database Setup
+### Configure your database settings 
 1. Copy `.env.example` to `.env`  
    ```bash
    copy .env.example .env
@@ -59,6 +50,14 @@ php artisan serve
    ```bash
    php artisan migrate:fresh --seed
    ```
+### Continue the installation process
+```bash
+php artisan storage:link
+npm install
+npm run build
+php artisan serve
+```
+
 
 <br>
 
