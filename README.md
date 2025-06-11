@@ -23,27 +23,17 @@ A simple e-learning platform built using Laravel Framework version 12.17.0.
 git clone https://github.com/Abssdghi/e-learning-platform
 cd e-learning-platform
 composer install
-cp .env.example .env
-php artisan key:generate
-# Configure your .env database settings
-php artisan migrate --seed
+# Configure your database settings (use Database Setup section)
+php artisan storage:link
 npm install
-npm run dev
+npm run build
+php artisan serve
 ```
 
 <br>
 
-## Architectural Decisions
 
-- The project follows the **Laravel MVC structure**, ensuring clean code organization by separating application logic, presentation, and data handling.
-
-- Although a **RESTful API** approach was initially considered, a **Blade-based monolithic structure** was selected to better align with the project's UI requirements and to simplify implementation.
-
-- **Laravel Breeze** was used for secure and modern authentication scaffolding. **Custom middleware** was implemented to enforce role-based access control (RBAC), restricting admin routes to authorized users only.
-
-<br>
-
-## Database Setup: Migrations & Seeding
+## Database Setup
 1. Copy `.env.example` to `.env`  
 2. Generate the app key:  
    ```bash
@@ -76,6 +66,16 @@ npm run dev
 | ![1](/screenshots/1.png) | ![2](/screenshots/2.png) | ![3](/screenshots/3.png) |
 | | |
 | ![4](/screenshots/4.png) | ![5](/screenshots/5.png) |
+
+<br>
+
+## Architectural Decisions
+
+- The project follows the **Laravel MVC structure**, ensuring clean code organization by separating application logic, presentation, and data handling.
+
+- Although a **RESTful API** approach was initially considered, a **Blade-based monolithic structure** was selected to better align with the project's UI requirements and to simplify implementation.
+
+- **Laravel Breeze** was used for secure and modern authentication scaffolding. **Custom middleware** was implemented to enforce role-based access control (RBAC), restricting admin routes to authorized users only.
 
 <br>
 
